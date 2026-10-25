@@ -1,0 +1,14 @@
+name: Feedback
+description: Ideas, confusion, things you'd change
+labels: [feedback]
+body:
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Your feedback
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: What were you trying to do?
