@@ -11,7 +11,7 @@ $ErrorActionPreference = 'Stop'
 $Distro = 'Ubuntu-24.04'
 $InstallUrl = 'https://raw.githubusercontent.com/FlologixAI/marv-os-releases/main/install.sh'
 
-function Say($Message) { Write-Host $Message }
+function Say($Message) { Write-Output $Message }
 
 # 1. Windows 11, or Windows 10 21H2 (build 19044) and later, support WSL2 with WSLg.
 $build = [System.Environment]::OSVersion.Version.Build

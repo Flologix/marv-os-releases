@@ -44,7 +44,7 @@ esac
 ID=""; ID_LIKE=""
 OSREL="${MARV_OS_RELEASE_FILE:-/etc/os-release}"   # override is for testing
 if [ -r "$OSREL" ]; then
-  # shellcheck disable=SC1091
+  # shellcheck disable=SC1090,SC1091
   . "$OSREL"
 fi
 DISTRO="${ID:-unknown}"
