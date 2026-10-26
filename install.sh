@@ -1,7 +1,7 @@
 #!/bin/sh
 # Marv OS installer for Linux (and WSL2).
 #
-#   curl -fsSL https://raw.githubusercontent.com/FlologixAI/marv-os-releases/main/install.sh | sh
+#   curl -fsSL https://raw.githubusercontent.com/Flologix/marv-os-releases/main/install.sh | sh
 #
 # Environment:
 #   MARV_OS_VERSION   install this version (e.g. 1.0.0-beta.1) instead of the newest release
@@ -12,7 +12,7 @@
 # else from the network. It uses sudo only for apt, and tells you first.
 set -eu
 
-REPO="FlologixAI/marv-os-releases"
+REPO="Flologix/marv-os-releases"
 API="https://api.github.com/repos/$REPO/releases"
 
 say() { printf '%s\n' "$*"; }

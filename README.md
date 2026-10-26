@@ -2,7 +2,7 @@
 
 Downloads, release notes and feedback for the **Marv OS desktop beta** by [FloLogix AI](https://flologixai.com).
 
-Marv OS is the Marv desktop app for running several coding agents on your own machine: see what each one is doing, what needs you, and what happened while you were away. It's built on the open-source [Marv](https://github.com/FlologixAI/marv) engine.
+Marv OS is the Marv desktop app for running several coding agents on your own machine: see what each one is doing, what needs you, and what happened while you were away. It's built on the open-source [Marv](https://github.com/Flologix/marv) engine.
 
 This repository holds **binaries only**: no source code.
 
@@ -10,19 +10,19 @@ This repository holds **binaries only**: no source code.
 
 You'll need a model provider: an OpenRouter key, a ChatGPT or Z.ai plan, or Ollama running locally. The first run walks you through it.
 
-Every download is listed with a checksum in `SHA256SUMS` on the [Releases](https://github.com/FlologixAI/marv-os-releases/releases) page. Releases are marked "pre-release" while Marv OS is in beta.
+Every download is listed with a checksum in `SHA256SUMS` on the [Releases](https://github.com/Flologix/marv-os-releases/releases) page. Releases are marked "pre-release" while Marv OS is in beta.
 
 ### Linux (x86_64)
 
 One command:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/FlologixAI/marv-os-releases/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/Flologix/marv-os-releases/main/install.sh | sh
 ```
 
 On Debian and Ubuntu it installs the `.deb` with apt (the only step that uses `sudo`, and it says so first). Elsewhere it puts the AppImage at `~/.local/bin/marv-os` and adds an app menu entry. It checks the download against `SHA256SUMS` before installing, and runs nothing else from the network. Set `MARV_OS_VERSION=1.0.0-beta.1` to pin a version. Read the script first if you like: [install.sh](install.sh).
 
-Manually, from [Releases](https://github.com/FlologixAI/marv-os-releases/releases):
+Manually, from [Releases](https://github.com/Flologix/marv-os-releases/releases):
 
 - **AppImage:** `chmod +x Marv*.AppImage && ./Marv*.AppImage`
 - **Debian/Ubuntu:** `sudo apt install ./marv-os_*.deb`
@@ -40,7 +40,7 @@ Marv OS runs on Windows inside WSL2 (Windows 10 21H2 or later, or Windows 11) an
 In PowerShell:
 
 ```powershell
-irm https://raw.githubusercontent.com/FlologixAI/marv-os-releases/main/install-windows.ps1 | iex
+irm https://raw.githubusercontent.com/Flologix/marv-os-releases/main/install-windows.ps1 | iex
 ```
 
 It installs WSL2 with Ubuntu 24.04 if you don't have it (Windows may ask for a restart: run the command again afterwards), then runs the Linux installer inside Ubuntu. Read it first: [install-windows.ps1](install-windows.ps1).
@@ -65,6 +65,6 @@ Nothing from Marv OS itself: it has no telemetry, analytics or crash reporting, 
 
 ## Feedback
 
-Open an issue: [report a bug](https://github.com/FlologixAI/marv-os-releases/issues/new?template=bug.yml) or [share feedback](https://github.com/FlologixAI/marv-os-releases/issues/new?template=feedback.yml). Please never paste API keys or private code into an issue.
+Open an issue: [report a bug](https://github.com/Flologix/marv-os-releases/issues/new?template=bug.yml) or [share feedback](https://github.com/Flologix/marv-os-releases/issues/new?template=feedback.yml). Please never paste API keys or private code into an issue.
 
 © FloLogix AI. All rights reserved. The open-source Marv engine is MIT-licensed; the Marv OS desktop is not.

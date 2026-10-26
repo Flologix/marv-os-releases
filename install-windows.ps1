@@ -1,6 +1,6 @@
 # Marv OS on Windows, through WSL2 (experimental).
 #
-#   irm https://raw.githubusercontent.com/FlologixAI/marv-os-releases/main/install-windows.ps1 | iex
+#   irm https://raw.githubusercontent.com/Flologix/marv-os-releases/main/install-windows.ps1 | iex
 #
 # What it does: checks your Windows build, installs WSL2 with Ubuntu 24.04 if you
 # have no Linux distribution yet, then runs the Marv OS Linux installer inside it.
@@ -9,7 +9,7 @@
 $ErrorActionPreference = 'Stop'
 
 $Distro = 'Ubuntu-24.04'
-$InstallUrl = 'https://raw.githubusercontent.com/FlologixAI/marv-os-releases/main/install.sh'
+$InstallUrl = 'https://raw.githubusercontent.com/Flologix/marv-os-releases/main/install.sh'
 
 function Say($Message) { Write-Output $Message }
 
