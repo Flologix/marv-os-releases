@@ -12,6 +12,9 @@
 # else from the network. It uses sudo only for apt, and tells you first.
 set -eu
 
+# Everything is inside main, called on the last line: a download cut off midway runs nothing.
+main() {
+
 REPO="Flologix/marv-os-releases"
 API="https://api.github.com/repos/$REPO/releases"
 
@@ -155,7 +158,7 @@ if [ "$FORMAT" = deb ]; then
   fi
   bwrap_hint
   say ""
-  say "Marv OS is installed. Start it from your app menu, or run:  marv-os"
+  say "Marv OS is installed. Start it from your app menu, or run:  marv-desktop"
 else
   BIN_DIR="$HOME/.local/bin"
   APP_DIR="$HOME/.local/share/applications"
@@ -191,3 +194,6 @@ fi
 if [ "$IS_WSL" = 1 ]; then
   say "On Windows, the app also appears in the Start menu through WSLg."
 fi
+}
+
+main "$@"

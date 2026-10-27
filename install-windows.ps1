@@ -63,4 +63,4 @@ if ($LASTEXITCODE -ne 0) {
 Say ''
 Say 'Done. To start Marv OS:'
 Say '  - open "Marv OS" from the Windows Start menu (WSLg adds it automatically), or'
-Say "  - run:  wsl -d $Distro marv-os"
+Say "  - run:  wsl -d $Distro marv-desktop"

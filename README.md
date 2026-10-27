@@ -50,7 +50,7 @@ Manually:
 1. In PowerShell: `wsl --install -d Ubuntu-24.04`, restart if asked, and finish Ubuntu's first-run setup.
 2. `wsl --update`
 3. In Ubuntu, run the Linux one-liner above.
-4. Start Marv OS from the Start menu, or run `wsl -d Ubuntu-24.04 marv-os`.
+4. Start Marv OS from the Start menu, or run `wsl -d Ubuntu-24.04 marv-desktop`.
 
 If the window doesn't open, run `wsl --update` and `wsl --shutdown`, then try again.
 
