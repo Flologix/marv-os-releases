@@ -8,7 +8,12 @@ This repository holds **binaries only**: no source code.
 
 ## Install
 
-You'll need a model provider: an OpenRouter key, a ChatGPT or Z.ai plan, or Ollama running locally. The first run walks you through it.
+You'll need one of these model providers. The first run walks you through it.
+
+- **OpenRouter:** an [API key](https://openrouter.ai/settings/keys) (hundreds of cloud models, pay per use).
+- **Ollama:** [Ollama](https://ollama.com) running on your machine, with a model that supports tool calling (for example `ollama pull qwen3.5:9b`).
+
+Signing in with a ChatGPT plan or using a Z.ai GLM Coding Plan isn't available in the beta yet: both are waiting on the vendors.
 
 Every download is listed with a checksum in `SHA256SUMS` on the [Releases](https://github.com/Flologix/marv-os-releases/releases) page. Releases are marked "pre-release" while Marv OS is in beta.
 
@@ -61,7 +66,7 @@ If the window doesn't open, run `wsl --update` and `wsl --shutdown`, then try ag
 
 ## What leaves your machine
 
-Nothing from Marv OS itself: it has no telemetry, analytics or crash reporting, and no account or sign-up. The only network traffic is to the model provider you configure (OpenRouter, ChatGPT, Z.ai or your own Ollama), carrying your prompts and the context the agents send. If you use OpenRouter, the app also reads OpenRouter's public model list (`openrouter.ai/api/v1/models`) to fill the model picker; that request carries no data from you. Anything an agent does on your behalf, such as a `git push` or a web request in a command you approved, is of course up to that command.
+Nothing from Marv OS itself: it has no telemetry, analytics or crash reporting, and no account or sign-up. The only network traffic is to the model provider you configure (OpenRouter, or your own Ollama), carrying your prompts and the context the agents send. If you use OpenRouter, the app also reads OpenRouter's public model list (`openrouter.ai/api/v1/models`) to fill the model picker; that request carries no data from you. Anything an agent does on your behalf, such as a `git push` or a web request in a command you approved, is of course up to that command.
 
 ## Feedback
 
