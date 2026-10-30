@@ -4,7 +4,7 @@
 #   curl -fsSL https://raw.githubusercontent.com/Flologix/marv-os-releases/main/install.sh | sh
 #
 # Environment:
-#   MARV_OS_VERSION   install this version (e.g. 1.0.0-beta.1) instead of the newest release
+#   MARV_OS_VERSION   install this version (e.g. 1.0.0-beta.2) instead of the newest release
 #   MARV_OS_FORMAT    "deb" or "appimage" to override the automatic choice
 #
 # The script downloads one package from this repository's GitHub releases,

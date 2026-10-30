@@ -11,9 +11,11 @@ This repository holds **binaries only**: no source code.
 You'll need one of these model providers. The first run walks you through it.
 
 - **OpenRouter:** an [API key](https://openrouter.ai/settings/keys) (hundreds of cloud models, pay per use).
+- **ChatGPT Plus or Pro:** choose **Sign in with ChatGPT**; your browser opens, and your subscription pays for the agents' requests.
+- **Kimi Code:** the API key from your Kimi Code membership.
 - **Ollama:** [Ollama](https://ollama.com) running on your machine, with a model that supports tool calling (for example `ollama pull qwen3.5:9b`).
 
-Signing in with a ChatGPT plan or using a Z.ai GLM Coding Plan isn't available in the beta yet: both are waiting on the vendors.
+A Z.ai GLM Coding Plan isn't offered: Z.ai allows it only in the tools it lists, and Marv isn't listed yet.
 
 Every download is listed with a checksum in `SHA256SUMS` on the [Releases](https://github.com/Flologix/marv-os-releases/releases) page. Releases are marked "pre-release" while Marv OS is in beta.
 
@@ -25,7 +27,7 @@ One command:
 curl -fsSL https://raw.githubusercontent.com/Flologix/marv-os-releases/main/install.sh | sh
 ```
 
-On Debian and Ubuntu it installs the `.deb` with apt (the only step that uses `sudo`, and it says so first). Elsewhere it puts the AppImage at `~/.local/bin/marv-os` and adds an app menu entry. It checks the download against `SHA256SUMS` before installing, and runs nothing else from the network. Set `MARV_OS_VERSION=1.0.0-beta.1` to pin a version. Read the script first if you like: [install.sh](install.sh).
+On Debian and Ubuntu it installs the `.deb` with apt (the only step that uses `sudo`, and it says so first). Elsewhere it puts the AppImage at `~/.local/bin/marv-os` and adds an app menu entry. It checks the download against `SHA256SUMS` before installing, and runs nothing else from the network. Set `MARV_OS_VERSION=1.0.0-beta.2` to pin a version. Read the script first if you like: [install.sh](install.sh).
 
 Manually, from [Releases](https://github.com/Flologix/marv-os-releases/releases):
 
@@ -59,6 +61,8 @@ Manually:
 
 If the window doesn't open, run `wsl --update` and `wsl --shutdown`, then try again.
 
+For a step-by-step guide to setting up and using Marv OS, see the [Marv OS docs](https://www.flologixai.com/docs/marv-os).
+
 ## Beta notes
 
 - This is a beta: expect rough edges, and keep backups of work you care about.
@@ -66,7 +70,7 @@ If the window doesn't open, run `wsl --update` and `wsl --shutdown`, then try ag
 
 ## What leaves your machine
 
-Nothing from Marv OS itself: it has no telemetry, analytics or crash reporting, and no account or sign-up. The only network traffic is to the model provider you configure (OpenRouter, or your own Ollama), carrying your prompts and the context the agents send. If you use OpenRouter, the app also reads OpenRouter's public model list (`openrouter.ai/api/v1/models`) to fill the model picker; that request carries no data from you. Anything an agent does on your behalf, such as a `git push` or a web request in a command you approved, is of course up to that command.
+Nothing from Marv OS itself: it has no telemetry, analytics or crash reporting, and no account or sign-up. The only network traffic is to the model provider you configure (OpenRouter, OpenAI for a ChatGPT sign-in, Kimi, or your own Ollama), carrying your prompts and the context the agents send. Signing in with ChatGPT also goes through OpenAI's sign-in page in your browser. If you use OpenRouter, the app also reads OpenRouter's public model list (`openrouter.ai/api/v1/models`) to fill the model picker; that request carries no data from you. Anything an agent does on your behalf, such as a `git push` or a web request in a command you approved, is of course up to that command.
 
 ## Feedback
 
